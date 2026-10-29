@@ -122,9 +122,9 @@ fun CepScreen(modifier: Modifier = Modifier) {
                                 ) {
                                     Log.i("Teste", "Response ${response.body()}")
 
-                                    response.body()?.let { endereco ->
-                                        listaEnderecoState = listOf(endereco)
-                                    }
+                                    listaEnderecoState = listOf(
+                                        response.body()!!
+                                    )
                                 }
 
                                 override fun onFailure(
